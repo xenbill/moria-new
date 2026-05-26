@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Categories.Demo/Categories.Demo.csproj" />
+  <Project Path="Categories.Tests/Categories.Tests.csproj" />
+  <Project Path="Categories/Categories.csproj" />
+</Solution>
