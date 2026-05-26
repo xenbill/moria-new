@@ -39,6 +39,10 @@ namespace Categories
         /// </summary>
         public static decimal GetMoriaForEjoteriko(int mhnes)
         {
+            // Αρνητικοί μήνες (μη έγκυρη είσοδος) δεν δίνουν μόρια.
+            if (mhnes < 0)
+                return 0m;
+
             decimal result = 0m;
 
             // Διατρέχουμε τις ζώνες με τη σειρά. Σε κάθε ζώνη "κόβουμε" όσους

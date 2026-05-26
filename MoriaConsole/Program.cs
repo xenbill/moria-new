@@ -11,6 +11,7 @@ namespace MoriaConsole
 
         static decimal GetMoriaForEjoteriko(int mhnes)
         {
+            if (mhnes < 0) return 0m;
             decimal result = 0m;
             for (int i = 0; i < CatRate.Length && mhnes > 0; i++)
             {

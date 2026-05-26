@@ -39,5 +39,11 @@ namespace Categories.Tests
 
             Assert.Equal(-120m, result);
         }
+
+        [Fact]
+        public void GetMoriaForEjoteriko_NegativeMonths_ReturnsZero()
+        {
+            Assert.Equal(0m, CategoryLegacy.GetMoriaForEjoteriko(0, -5, 1));
+        }
     }
 }

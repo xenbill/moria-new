@@ -40,6 +40,11 @@ namespace Categories
 
         public static decimal GetMoriaForEjoteriko(int totalmhnes, int mhnes, int CatID)
         {
+            // Προσθήκη (εκτός αρχικού κώδικα): αρνητικοί μήνες -> 0, ώστε να μην
+            // προκύπτει θετικό αποτέλεσμα (αρνητικό × αρνητικό = θετικό).
+            if (mhnes < 0)
+                return 0;
+
             decimal result = 0;
             int restMonths = 0;
 
